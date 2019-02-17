@@ -4,7 +4,7 @@
     <groupId>com.boxfuse.samples</groupId>
     <artifactId>hello</artifactId>
     <packaging>war</packaging>
-    <version>1.14</version>
+    <version>1.15</version>
     <name>hello</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
     <dependencies>
@@ -34,16 +34,4 @@
             </plugin>
         </plugins>
     </build>
-<distributionManagement>
-   <repository>
-       <id>deployment</id>
-       <name>nexus-host</name>
-<url>http://192.168.0.6:8081/nexus/content/repositories/nexus-host/</url>
-   </repository>
-   <snapshotRepository>
-       <id>deployment</id>
-       <name>nexus-snap</name>
-<url>http://192.168.0.6:8081/nexus/content/repositories/nexus-snap/</url>
-   </snapshotRepository>
-</distributionManagement>
 </project>
