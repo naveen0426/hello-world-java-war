@@ -14,7 +14,7 @@ pipeline
         {
             steps
             {
-               sh label: '', script: 'mvn package'
+               sh label: '', script: 'clean package'
             }
         }
         stage('ContinousDeployment')
