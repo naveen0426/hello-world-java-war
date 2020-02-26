@@ -14,7 +14,7 @@ pipeline
         {
             steps
             {
-               sh label: '', script: 'mvn install'
+               sh label: '', script: 'mvn -v'
             }
         }
         stage('ContinousDeployment')
