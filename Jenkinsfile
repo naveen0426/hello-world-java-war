@@ -10,11 +10,21 @@ pipeline
                git 'https://github.com/naveen0426/hello-world-java-war.git' 
             }
         }
-        stage('ContinousBuild')
+        stage('initialsie')
         {
             steps
             {
-               sh 'mvn -v'
+                sh '''
+                echo "PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
+        stage('Build')
+        {
+            steps
+            {
+                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
         stage('ContinousDeployment')
