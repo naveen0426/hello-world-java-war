@@ -31,7 +31,7 @@ pipeline
         {
             steps
             {
-               sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war jenkins@172.31.81.192 /opt/tomcat/tomcat/webapps/hello-1.16.war'
+               sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war jenkins@172.31.81.192 /opt/tomcat/tomcat/webapps'
             }
         }
         stage('ContinousTesting')
@@ -47,7 +47,7 @@ pipeline
         {
             steps
             {
-              sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war jenkins@172.31.94.14:/root/hello-1.16.war'
+              sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war jenkins@172.31.94.14:/root'
             }
         }
     }
