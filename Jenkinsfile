@@ -31,7 +31,7 @@ pipeline
         {
             steps
             {
-               sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war jenkins@172.31.81.192 /opt/tomcat/tomcat/webapps'
+               sh label: '', script: 'scp /var/lib/jenkins/workspace/multipipeline_master@2/target/hello-1.16.war /opt/tomcat/tomcat/webapps jenkins@172.31.81.192'
             }
         }
         stage('ContinousTesting')
